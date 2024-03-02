@@ -30,8 +30,7 @@ export default function SubScale ({navigation}){
     });
 
     setUniqueTitles(uniqueTitles);
-    console.log('genre:',genre )
-    console.log('uniqueTitles:',uniqueTitles )
+    
     }, []);
 
 
@@ -41,7 +40,7 @@ export default function SubScale ({navigation}){
             <FlatList
                 data={uniqueTitles}
                 renderItem = {( {item} ) => (
-                    <TouchableOpacity onPress={()=> navigation.navigate('ShowScales', {title: item.title, interval: item.interval})}>
+                    <TouchableOpacity onPress={()=> navigation.navigate('ShowScales', {genre: genre, title: item.title, interval: item.interval})}>
                         <View style = {globalStyle.homeList}>
                             <Text style = {globalStyle.titleText}>{ item.title }</Text>
                         </View>

@@ -1,6 +1,4 @@
 
-noteList=["A","A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G", "G#", "A",
-         "A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G", "G#"]
 
 // //from AI
 // 1. Researching Scales:
@@ -18,16 +16,21 @@ noteList=["A","A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G", "G#", "A",
 // Include relevant information like scale mode (major, minor, etc.).
 // Use consistent notation for intervals (e.g., semitones).
 
+const noteList=["A","A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G", "G#", "A",
+         "A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G", "G#"]
+
+
+
 export const scales = [
     // Ethiopian Scales
     {
-      genre: "Ethiopian", title: "Tizita", intervals: [2, 2, 1, 2, 1, 2], key: 1,
+      genre: "Ethiopian", title: "Tizita Major", intervals: [2,2,3,2], key: 1,
     },
     {
-      genre: "Ethiopian",title: "Ambasel", intervals: [1, 2, 2, 2, 1, 2], key: 2,
+      genre: "Ethiopian",title: "Ambasel", intervals: [1,4,2,1], key: 2,
     },
     {
-      genre: "Ethiopian", title: "Gonder", intervals: [2, 2, 1, 2, 1, 1, 2],
+      genre: "Ethiopian", title: "Bati Major", intervals: [4,1,2,4],
       key: 3,
     },
   
@@ -44,10 +47,10 @@ export const scales = [
   
     // R&B Scales (Pentatonic and Blues-based)
     {
-      genre: "R&B", title: "Major Pentatonic", intervals: "[2, 2, 1, 2, 1]", key: 7,
+      genre: "R&B", title: "Major Pentatonic", intervals: [2, 2, 1, 2, 1], key: 7,
     },
     {
-      genre: "R&B", title: "Minor Pentatonic", intervals: "[1, 3, 2, 3, 1]", key: 8,
+      genre: "R&B", title: "Minor Pentatonic", intervals: [1, 3, 2, 3, 1], key: 8,
     },
     {
       genre: "R&B", title: "Blues Scale", intervals: [1, 1, 2, 1, 1, 1, 2], key: 9,
@@ -58,9 +61,9 @@ export const scales = [
       genre: "Western", title: "Major Scale", intervals: [2, 2, 1, 2, 2, 2, 1], key: 10,
     },
     {
-      genre: "Western", title: "Minor Scale (Natural)", intervals: "[2, 1, 2, 2, 1, 2, 2]", key: 11,
+      genre: "Western", title: "Minor Scale (Natural)", intervals: [2, 1, 2, 2, 1, 2, 2], key: 11,
     },
     {
-      genre: "Japanese", title: "Yo scale", intervals: "[2, 3, 2, 2, 3, 2]", key: 12,
+      genre: "Japanese", title: "Yo scale", intervals: [2, 3, 2, 2, 3, 2], key: 12,
     },
   ];
