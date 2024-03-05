@@ -11,10 +11,19 @@ export const globalStyle = StyleSheet.create({
         color: '#ffffff',
         
     },
-    paragraph: {
-        marginVertical: 8,
-        lineHeight: 20,
-        
+    viewText:{
+        backgroundColor: ' #616105',
+        fontFamily: 'march-rough',
+        fontWeight: 'bold',
+        fontSize: 14,
+        //textTransform: 'uppercase',
+        //backgroundColor: '#3d0099',
+        //margin: 0,
+        //padding: 0,
+        shadowColor: '#666699',
+        shadowOpacity: 0.5,
+        shadowRadius: 4,
+        borderRadius: 5,
     },
     button:{
         backgroundColor: '#ff9900',
@@ -29,5 +38,10 @@ export const globalStyle = StyleSheet.create({
         shadowRadius: 4,
         borderRadius: 5,
 
+    },
+    chooseNote:{
+        flexDirection: 'row', 
+        flexWrap: 'wrap',
+        
     }
 })

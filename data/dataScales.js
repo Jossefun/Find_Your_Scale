@@ -50,20 +50,50 @@ export const scales = [
       genre: "R&B", title: "Major Pentatonic", intervals: [2, 2, 1, 2, 1], key: 7,
     },
     {
-      genre: "R&B", title: "Minor Pentatonic", intervals: [1, 3, 2, 3, 1], key: 8,
+      genre: "R&B",
+      title: "Dorian Mode",
+      intervals: [2, 1, 2, 2, 2, 1, 2],
+      key: 8,
     },
     {
-      genre: "R&B", title: "Blues Scale", intervals: [1, 1, 2, 1, 1, 1, 2], key: 9,
+      genre: "R&B",
+      title: "Mixolydian Mode",
+      intervals: [2, 2, 1, 2, 2, 1],
+      key: 9,
+    },
+    {
+      genre: "R&B",
+      title: "Super Locrian",
+      intervals: [1, 1, 1, 2, 1, 3, 1],
+      key: 10,
+    },
+    {
+      genre: "R&B",
+      title: "Bebop Dominant Scale",
+      intervals: [2, 2, 1, 1, 1, 2, 1],
+      key: 11,
+    },
+    {
+      genre: "R&B",
+      title: "Whole Tone Scale",
+      intervals: [2, 2, 2, 2, 2, 2],
+      key: 12,
+    },
+    {
+      genre: "R&B", title: "Minor Pentatonic", intervals: [1, 3, 2, 3, 1], key: 13,
+    },
+    {
+      genre: "R&B", title: "Blues Scale", intervals: [1, 1, 2, 1, 1, 1, 2], key: 14,
     },
   
     // Additional Scales (Examples)
     {
-      genre: "Western", title: "Major Scale", intervals: [2, 2, 1, 2, 2, 2, 1], key: 10,
+      genre: "Western", title: "Major Scale", intervals: [2, 2, 1, 2, 2, 2, 1], key: 15,
     },
     {
-      genre: "Western", title: "Minor Scale (Natural)", intervals: [2, 1, 2, 2, 1, 2, 2], key: 11,
+      genre: "Western", title: "Minor Scale (Natural)", intervals: [2, 1, 2, 2, 1, 2, 2], key: 16,
     },
     {
-      genre: "Japanese", title: "Yo scale", intervals: [2, 3, 2, 2, 3, 2], key: 12,
+      genre: "Japanese", title: "Yo scale", intervals: [2, 3, 2, 2, 3, 2], key: 17,
     },
   ];

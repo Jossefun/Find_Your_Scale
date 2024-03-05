@@ -3,17 +3,15 @@ import { View, Text } from "react-native";
 import { globalStyle } from '../styles/global';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
-import ShowScales from "./showScales";
 import { scales } from "../data/dataScales";
 
-
-export default function SubScale ({navigation}){
+export default function SubScale (){
+    const navigation = useNavigation()
 
     const route = useRoute();
     const interval =route.params?.interval
     const title = route.params?.title
     const genre  = route.params.genre;
-//חייב למצוא דרך למפות מקובץ דאטא אובייקטים ספציפיים 
 
     const [uniqueTitles, setUniqueTitles] = useState([]);
 
@@ -33,14 +31,13 @@ export default function SubScale ({navigation}){
     
     }, []);
 
-
-
+   
     return(
         <View style={globalStyle.container}>
             <FlatList
                 data={uniqueTitles}
                 renderItem = {( {item} ) => (
-                    <TouchableOpacity onPress={()=> navigation.navigate('ShowScales', {genre: genre, title: item.title, interval: item.interval})}>
+                    <TouchableOpacity onPress={()=> navigation.navigate('ChooseNote', {item})}>
                         <View style = {globalStyle.homeList}>
                             <Text style = {globalStyle.titleText}>{ item.title }</Text>
                         </View>

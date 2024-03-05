@@ -3,7 +3,6 @@ import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { globalStyle } from '../styles/global';
 import { scales } from "../data/dataScales";
 
-
 export default function Home( { navigation } ){
     
   const [uniqueGenres, setUniqueGenres] = useState([]);
@@ -23,9 +22,7 @@ export default function Home( { navigation } ){
     setUniqueGenres(uniqueScales);
   }, []);
        
-    const handlePress = ()=> {
-        
-    }
+    
     return(
        <View style={globalStyle.container}>
             <FlatList
