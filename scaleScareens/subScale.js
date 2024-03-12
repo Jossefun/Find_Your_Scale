@@ -38,8 +38,8 @@ export default function SubScale (){
                 data={uniqueTitles}
                 renderItem = {( {item} ) => (
                     <TouchableOpacity onPress={()=> navigation.navigate('ChooseNote', {item})}>
-                        <View style = {globalStyle.homeList}>
-                            <Text style = {globalStyle.titleText}>{ item.title }</Text>
+                        <View style = {globalStyle.flatList}>
+                            <Text style = {globalStyle.textList}>{ item.title }</Text>
                         </View>
                     </TouchableOpacity>
                 )}

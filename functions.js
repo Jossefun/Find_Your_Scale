@@ -1,7 +1,7 @@
 import { scales } from "./data/dataScales";
 import { useRoute } from "@react-navigation/native";
 
-const noteList=["A","A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G", "G#"];
+const noteList=["C", "C#","D" ,"D#","E", "F", "F#", "G", "G#", "A","A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G","G#","A","A#", "B","C"]
 
 export function getScaleNotes(combinedData) {
 
@@ -12,11 +12,13 @@ export function getScaleNotes(combinedData) {
 
     // Find the starting note index in the noteList
     let startIndex = noteList.indexOf(selectedNote);
-    
     const scaleNotes = [];
     scaleNotes.push(noteList[startIndex])
+    console.log("scaleNotes with first index: ",scaleNotes )
+    
     //Loop through the intervals and build the scale
-    for (let i = 0; i < item.intervals.length; i++) {    
+    for (let i = 0; i < item.intervals.length; i++) { 
+         
       let currentInterval = item.intervals[i];
       let newIndex = startIndex + currentInterval;
       
@@ -32,7 +34,7 @@ export function getScaleNotes(combinedData) {
       scaleNotes.push(noteList[newIndex]);
       startIndex  += item.intervals[i];
     }
-     
+
     console.log("result: ", scaleNotes)
     console.log("\n","\n","\n")
   

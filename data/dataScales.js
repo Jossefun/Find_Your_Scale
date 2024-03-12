@@ -1,53 +1,49 @@
 
 
-// //from AI
-// 1. Researching Scales:
-
-// Ethiopian Scales: Explore resources like "Ethiopian Musical Modes" by Fekadu G. Yohannes and online resources like "Ethiopian Music Scales."
-// Indian Scales (Thaat system): Refer to books like "The Ragas of North Indian Classical Music" by Ashok D. Ranade and online sources like "Thaat System Explained."
-// R&B Scales: Consult books like "The R&B Guitarist" by Desi Serna and websites like "R&B Scales and Chords."
-// 2. Replacing Intervals with Numbers:
-// Semitones: Use numbers 0-11, with 0 being a unison and 11 being an octave.
-// Whole Tones/Half Steps: Use 2 for a whole tone and 1 for a half step.
-// Microtones: Assign fractional values based on their size relative to a semitone.
-// 3. Building Your List:
-
-// Start with the provided examples and expand based on your research.
-// Include relevant information like scale mode (major, minor, etc.).
-// Use consistent notation for intervals (e.g., semitones).
-
-const noteList=["A","A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G", "G#", "A",
-         "A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G", "G#"]
+const noteList=["C", "C#","D" ,"D#","E", "F", "F#", "G", "G#", "A","A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G","G#","A","A#", "B","C"]
 
 
 
 export const scales = [
     // Ethiopian Scales
+   
     {
-      genre: "Ethiopian", title: "Tizita Major", intervals: [2,2,3,2], key: 1,
+      genre: "Ethiopian",
+      title: "Ambasel", 
+      intervals: [1,4,2,1], 
+      key: 2,
     },
     {
-      genre: "Ethiopian",title: "Ambasel", intervals: [1,4,2,1], key: 2,
-    },
-    {
-      genre: "Ethiopian", title: "Bati Major", intervals: [4,1,2,4],
+      genre: "Ethiopian", 
+      title: "Bati Major", 
+      intervals: [4,1,2,4],
       key: 3,
     },
   
     // Indian Scales (Thaat system)
     {
-      genre: "Indian", title: "Bilawal", intervals: [2, 2, 1, 2, 1], key: 4,
+      genre: "Indian", 
+      title: "Bilawal", 
+      intervals: [2, 2, 1, 2, 1], 
+      key: 4,
     },
     {
-      genre: "Indian", title: "Bhairav", intervals: [1, 1, 2, 2, 1, 2], key: 5,
+      genre: "Indian", 
+      title: "Bhairav", 
+      intervals: [1, 1, 2, 2, 1, 2], 
+      key: 5,
     },
     {
-      genre: "Indian", title: "Charukeshi", intervals: [1, 2, 1, 2, 1, 1], key: 6,
+      genre: "Indian", 
+      title: "Charukeshi", 
+      intervals: [1, 2, 1, 2, 1, 1], key: 6,
     },
   
     // R&B Scales (Pentatonic and Blues-based)
     {
-      genre: "R&B", title: "Major Pentatonic", intervals: [2, 2, 1, 2, 1], key: 7,
+      genre: "R&B", 
+      title: "Major Pentatonic", 
+      intervals: [2, 2, 1, 2, 1], key: 7,
     },
     {
       genre: "R&B",
@@ -80,20 +76,66 @@ export const scales = [
       key: 12,
     },
     {
-      genre: "R&B", title: "Minor Pentatonic", intervals: [1, 3, 2, 3, 1], key: 13,
+      genre: "R&B", 
+      title: "Minor Pentatonic", 
+      intervals: [1, 3, 2, 3, 1], 
+      key: 13,
     },
     {
-      genre: "R&B", title: "Blues Scale", intervals: [1, 1, 2, 1, 1, 1, 2], key: 14,
+      genre: "R&B", 
+      title: "Blues Scale", 
+      intervals: [1, 1, 2, 1, 1, 1, 2], 
+      key: 14,
     },
   
     // Additional Scales (Examples)
     {
-      genre: "Western", title: "Major Scale", intervals: [2, 2, 1, 2, 2, 2, 1], key: 15,
+      genre: "Western", 
+      title: "Major", 
+      intervals: [2, 2, 1, 2, 2, 2, 1], 
+      key: 15,
     },
     {
-      genre: "Western", title: "Minor Scale (Natural)", intervals: [2, 1, 2, 2, 1, 2, 2], key: 16,
+      genre: "Western", 
+      title: "Minor (Natural)", 
+      intervals: [2, 1, 2, 2, 1, 2, 2], 
+      key: 16,
     },
     {
-      genre: "Japanese", title: "Yo scale", intervals: [2, 3, 2, 2, 3, 2], key: 17,
+      genre: "Japanese", 
+      title: "Yo", 
+      intervals: [2, 3, 2, 2, 3, 2], 
+      key: 17,
     },
+    {
+      genre: "Ethiopian",
+      title: "Anchi Hoye", 
+      intervals: [1,4,1,3], 
+      key: 18,
+    },
+    {
+      genre: "Ethiopian",
+      title: "Tizita Major", 
+      intervals: [2,2,3,2], 
+      key: 1,
+    },
+    {
+      genre: "Ethiopian",
+      title: "Tizita Minor", 
+      intervals: [2,1,4,1], 
+      key: 19,
+
+    },
+    {
+      genre: "R&B",
+      title: "Mixolydian b9 Scale",
+      intervals: [1, 2, 2, 1, 1, 3/2, 1],
+      key: 20,
+     },
+     {
+      genre: "Arabic",
+      title: "Hijaz Scale",
+      intervals: [1, 3/4, 1, 1, 3/4, 1, 1/2],
+      key: 21,
+     }
   ];

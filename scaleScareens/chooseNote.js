@@ -19,21 +19,20 @@ export default function ChooseNote (){
     setSelectedNote(note);
     const combinedData = {selectedNote, item}
     console.log("combinedData: ",combinedData)
+    console.log("selected note: ",selectedNote)
     navigation.navigate('ShowScales', {combinedData})
 
   }
 
   return (
     <View style= {globalStyle.container}>
-      <View style={globalStyle.viewText}>
-          <Text>Choose Your Key Note :</Text>
-      </View>
+    {/* <Text style= {globalStyle.simpleText}>Choose Your Key Note:</Text> */}
       
       <View style={ globalStyle.container }>
-        {["A","A#", "B", "C", "C#","D" ,"D#","E", "F", "F#", "G", "G#"].map((note) => (
+        {["C", "C#","D" ,"D#","E", "F", "F#", "G", "G#","A",'A#', "B"].map((note) => (
           <TouchableOpacity key={note} onPress={() => handleNotePress(note)}>
-             <View style ={ globalStyle.homeList}> 
-                 <Text style={globalStyle.titleText}>{note}</Text>
+             <View style ={ globalStyle.flatList}> 
+                 <Text style={globalStyle.textList}>{note}</Text>
             </View>
          </TouchableOpacity>
         ))}

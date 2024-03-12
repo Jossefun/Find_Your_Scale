@@ -25,18 +25,17 @@ export default function ShowScales ({navigation}){
 
     const soundMap = {
         "C":  require('../notesMusic/Piano-4-Octave/C.wav'),
-        "C#": require('../notesMusic/Piano-4-Octave/C#.wav'),
+        "C#": require('../notesMusic/Piano-4-Octave/C4.wav'),
         "D":  require('../notesMusic/Piano-4-Octave/D.wav'),
-        "D#": require('../notesMusic/Piano-4-Octave/D#.wav'),
+        "D#": require('../notesMusic/Piano-4-Octave/D4.wav'),
         "E":  require('../notesMusic/Piano-4-Octave/E.wav'),
         "F":  require('../notesMusic/Piano-4-Octave/F.wav'),
-        "F#": require('../notesMusic/Piano-4-Octave/F#.wav'),
+        "F#": require('../notesMusic/Piano-4-Octave/F4.wav'),
         "G":  require('../notesMusic/Piano-4-Octave/G.wav'),
-        "G#": require('../notesMusic/Piano-4-Octave/G#.wav'),
+        "G#": require('../notesMusic/Piano-4-Octave/G4.wav'),
         "A":  require('../notesMusic/Piano-4-Octave/A.wav'),
-        "A#": require('../notesMusic/Piano-4-Octave/A#.wav'),
+        "A#": require('../notesMusic/Piano-4-Octave/A4.wav'),
         "B":  require('../notesMusic/Piano-4-Octave/B.wav'),
-        "C":  require('../notesMusic/Piano-4-Octave/C.wav'),
     }
 
      
@@ -44,9 +43,8 @@ export default function ShowScales ({navigation}){
       console.log("chosen note for play: ", note)
       if (!Object.hasOwnProperty.call(soundMap, note)) {
         console.warn(`Sound file not found for note: ${note}`);
-        return;
       }
-           
+      
       const { sound } = await Audio.Sound.createAsync(soundMap[note]);
       await sound.setStatusAsync({ shouldPlay: true });
       // Cleanup (optional):
@@ -54,14 +52,15 @@ export default function ShowScales ({navigation}){
           
     };
           
-     
+    
     
     return(
         <View style={globalStyle.container}>
+        <Text style={globalStyle.simpleText}> Play with your {item.title} {selectedNote} scale</Text>  
             { scaletoshow.map((note, index)=> (
               <TouchableOpacity  key={`${note}- ${index}`} onPress={() => playSound(note)}>
-                 <View  style = {globalStyle.homeList}>
-                     <Text style = {globalStyle.titleText}> {note} </Text>   
+                 <View  style = {globalStyle.flatList}>
+                     <Text style = {globalStyle.textList}> {note} </Text>   
                  </View>
               </TouchableOpacity> 
             ))}

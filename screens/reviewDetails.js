@@ -4,17 +4,16 @@ import { globalStyle } from '../styles/global';
 import { useNavigation } from '@react-navigation/native';
 
 
-const ReviewDetails = ({ route }) => {
+export default function ReviewDetails () {
 
-    const { item } = route.params;
+    
 
     return(
         <View style={globalStyle.container}>
-           <Text>{ item.title }</Text>
+           <Text style={{color:'#000000'}}>ReviewDetails Screen</Text>
            
         </View>
     )
 
 }
 
-export default  ReviewDetails;

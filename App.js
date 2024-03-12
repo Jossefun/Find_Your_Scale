@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View , TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeStack from './routes/homeStack';
-//import MyDrawer from './routes/drawer';
+import DrawerNavigation from './routes/drawerNavigation';
 
 
 export default function App() {
     
   return (
     <NavigationContainer>  
-        <HomeStack />     
+      <DrawerNavigation/>
     </NavigationContainer>  
     
   )

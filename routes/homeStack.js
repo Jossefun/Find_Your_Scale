@@ -1,8 +1,11 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/home';
-import ShowScales from '../scaleScareens/showScales';
+import ShowScale from '../scaleScareens/showScale';
 import SubScale from '../scaleScareens/subScale';
 import ChooseNote from '../scaleScareens/chooseNote';
+import ChooseGenre from '../scaleScareens/chooseGenre';
+
+
 
 const Stack = createStackNavigator( );
 
@@ -13,12 +16,12 @@ const HomeStack = () => {
     //Stack.Screen option infacts specific screen
     <Stack.Navigator screenOptions={
       { headerTitleStyle: {color: 'white'},
-        headerStyle: { backgroundColor: '#7575a3'},
+        headerStyle: { backgroundColor: '#f1b10e'},
         }}>
-      <Stack.Screen name="Home" component={Home} options={{ title: 'Scales Genres' }}/>
-      <Stack.Screen name="SubScale" component={SubScale} options={{title: 'Scale'} } />
+      <Stack.Screen name="ChooseGenre" component={ChooseGenre} options={{ title: 'Scales Genres' }}/>
+      <Stack.Screen name="SubScale" component={SubScale} options={{title: 'Choose Scale'} } />
       <Stack.Screen name="ChooseNote" component={ChooseNote} options={{title: 'All 12 Notes'} } />
-      <Stack.Screen name="ShowScales" component={ShowScales} options={{title: 'Find Your Scale'} } />
+      <Stack.Screen name="ShowScales" component={ShowScale} options={{title: 'This Is Your Scale'} } />
     </Stack.Navigator>
   );
 }
